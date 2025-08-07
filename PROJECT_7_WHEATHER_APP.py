@@ -17,7 +17,7 @@ while True:
     if city.lower() == "exit":
         break
     try:
-        url = f"https://api.weatherapi.com/v1/current.json?key=6f54cec5a187430581890551250608&q={city}"
+        url = f"https://api.weatherapi.com/v1/current.json?key=[ENTER YOUR API KEY HERE]={city}"
         r = requests.get(url)
         data = json.loads(r.text)
 
@@ -32,4 +32,5 @@ while True:
 
     except Exception as e:
         print("Something went wrong:", e)
+
         speak("Sorry, I could not get the weather information.")
